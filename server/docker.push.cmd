@@ -1,0 +1,2 @@
+docker tag xiaowei/download-datascreen-project worksite-docker.pkg.coding.net/xinzhongxin/docker/node-download-datascreen-project-service:latest
+docker push worksite-docker.pkg.coding.net/xinzhongxin/docker/node-download-datascreen-project-service:latest

@@ -7,7 +7,6 @@ const download = require('../controller/download')
 router.get('/', async ctx => {
     // 将请求参数返回，验证一下api是不是通的
     ctx.body = ctx.request.query
-
     let query = ctx.request.query
     if (!query.id)  {
         ctx.body = {
@@ -22,6 +21,11 @@ router.get('/', async ctx => {
         ctx.body = fs.createReadStream(filePath)
     }
     
+})
+
+router.get('/health', ctx => {
+    console.log('/health')
+    ctx.body = 'ok'
 })
 
 module.exports = router
